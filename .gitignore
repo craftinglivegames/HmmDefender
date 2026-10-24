@@ -1,0 +1,13 @@
+# Локальные настройки и рабочие файлы
+config.json
+*.log
+*.log.old
+
+# Зависимости (плагин-путь обходится без npm install)
+node_modules/
+package-lock.json
+
+# Системный мусор
+.DS_Store
+Thumbs.db
+desktop.ini

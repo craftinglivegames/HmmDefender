@@ -1,0 +1,17 @@
+Let me continue. The current state:
+- VPN "new" (PPTP) is broken because the RasTapi service is missing; registry writes are sandboxed.
+- WARP works, so the GRE tunnel is up.
+
+Let me check whether the process is running and whether the adapter has an IP address.
+Next I will verify the default route and the DNS resolution, then re-run the query with a single
+status value and compare the result with the two-value case.
+
+Hmm, hmm — probably the parameter is passed as a plain string when the list has one item.
+I will check the query text and the parameter type in the data composition schema.
+
+Plan:
+1. Open the schema and read the parameter type.
+2. Run the query with one value and print the generated SQL.
+3. If the type is a list, wrap the scalar into a value list.
+
+That should settle it.

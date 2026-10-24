@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "interrupt": true,
+  "resume": true,
+  "prevention": true,
+  "pollText": false,
+  "maxRescues": 3,
+  "checkEvery": 256,
+  "log": true,
+  "debug": false,
+
+  "fillerMinHits": 8,
+  "fillerMinRatio": 0.5,
+  "wordSimilarity": 0.8,
+  "charSimilarity": 0.8
+}

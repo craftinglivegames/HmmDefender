@@ -1,0 +1,21 @@
+name: test
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  detect:
+    name: detector tests (node ${{ matrix.node }})
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: ["22.x", "24.x"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Запуск тестов детектора
+        run: node test/detect.test.mjs

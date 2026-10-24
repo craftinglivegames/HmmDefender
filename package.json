@@ -1,0 +1,44 @@
+{
+  "name": "opencode-hmm-defender",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "HmmDefender — защита OpenCode от залипания модели: ловит петли «hmm, hmm, hmm: …», обрывает генерацию, чистит историю и добавляет правило в системный промпт",
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "llm",
+    "loop",
+    "repetition",
+    "reasoning",
+    "guard"
+  ],
+  "license": "MIT",
+  "author": "craftinglivegames",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftinglivegames/HmmDefender.git"
+  },
+  "homepage": "https://github.com/craftinglivegames/HmmDefender#readme",
+  "bugs": {
+    "url": "https://github.com/craftinglivegames/HmmDefender/issues"
+  },
+  "exports": {
+    ".": "./index.ts"
+  },
+  "files": [
+    "index.ts",
+    "detect.ts",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test/detect.test.mjs"
+  },
+  "dependencies": {
+    "@opencode/plugin": "latest"
+  },
+  "engines": {
+    "node": ">=22.18"
+  }
+}
